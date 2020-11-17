@@ -24,4 +24,4 @@ Copyright © 2020 [Jared Irwin](https://github.com/Link1J).
 
 This project is [CC0-1.0](LICENSE) licensed.
 
-Libaries provided by this have different licenses. The license of this repository does not overpower. Please refer to the license of the project.
+Libaries provided by this have different licenses. The license of this repository does not overpower it. Please refer to the license of the project.
