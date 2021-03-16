@@ -1,7 +1,7 @@
 vcpkg_fail_port_install(ON_TARGET linux osx)
 
 set(PACKAGE_NAME Microsoft.Windows.CppWinRT)
-set(VERSION 2.0.201008.2)
+set(VERSION 2.0.201113.7)
 set(SOURCE_PATH ${CURRENT_BUILDTREES_DIR}/src)
 
 vcpkg_find_acquire_program(NUGET)
@@ -14,7 +14,7 @@ vcpkg_execute_required_process(
 set(PACKAGE_PATH ${SOURCE_PATH}/${PACKAGE_NAME})
 
 vcpkg_execute_required_process(
-    COMMAND "${PACKAGE_PATH}/bin/cppwinrt.exe" -input sdk -output "${PACKAGE_PATH}/include"
+    COMMAND "${PACKAGE_PATH}/bin/cppwinrt.exe" -input local -output "${PACKAGE_PATH}/include"
 )
 file(COPY ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt DESTINATION ${PACKAGE_PATH})
 vcpkg_configure_cmake(
