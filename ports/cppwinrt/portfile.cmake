@@ -1,7 +1,7 @@
 vcpkg_fail_port_install(ON_TARGET linux osx)
 
 set(PACKAGE_NAME Microsoft.Windows.CppWinRT)
-set(VERSION 2.0.201113.7)
+set(VERSION 2.0.210312.4)
 set(SOURCE_PATH ${CURRENT_BUILDTREES_DIR}/src)
 
 vcpkg_find_acquire_program(NUGET)
