@@ -3,6 +3,10 @@
 		"ljh": {
 			"baseline": "2021-2-22",
 			"port-version": 0
+		},
+		"cppwinrt": {
+			"baseline": "2.0.201113.7",
+			"port-version": 0
 		}
 	}
 }
