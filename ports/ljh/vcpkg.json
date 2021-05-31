@@ -1,6 +1,7 @@
 {
 	"name": "ljh",
 	"version-string": "2021-5-31",
+	"port-version": 1,
 	"description": "ljh",
 	"homepage": "https://github.com/Link1J/ljh"
 }
