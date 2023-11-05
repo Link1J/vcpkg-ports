@@ -1,7 +1,8 @@
 {
-	"name": "cppwinrt",
-	"version-string": "2.0.210312.4",
-	"description": "C++/WinRT is a standard C++ language projection for the Windows Runtime.",
-	"homepage": "https://github.com/Microsoft/cppwinrt",
-	"supports": "windows"
+  "name": "cppwinrt",
+  "version": "2.0.210312.4",
+  "port-version": 1,
+  "description": "C++/WinRT is a standard C++ language projection for the Windows Runtime.",
+  "homepage": "https://github.com/Microsoft/cppwinrt",
+  "supports": "windows"
 }
