@@ -1,0 +1,22 @@
+diff --git a/src/main.cpp b/src/main.cpp
+index 6067c9a..34c42f8 100644
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -40,7 +40,7 @@ struct SimpleTransformer : CLI::CheckedTransformer
+     }
+ };
+ 
+-int main()
++int main(int argc, char** argv)
+ {
+     CLI::App app("A Wayland/X11 Scanner");
+     app.set_version_flag("--version", "1.0");
+@@ -68,7 +68,7 @@ int main()
+                  "Generate for server. With Wayland, is this a server implemention. With X11, this changes what generates for serialization.")
+         ->default_str("false");
+ 
+-    CLI11_PARSE(app, CLI::argc(), CLI::argv());
++    CLI11_PARSE(app, argc, argv);
+ 
+     ljh::overload actions{
+         [&](wayland::xml_handler&& handler) {

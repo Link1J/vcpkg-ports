@@ -1,0 +1,11 @@
+{
+  "name": "wayx-scanner",
+  "version": "0.0.1",
+  "description": "wayx-scanner",
+  "homepage": "https://git.link1j.me/link1j/wayx-scanner",
+  "dependencies": [
+    "cli11",
+    "ljh",
+    "range-v3"
+  ]
+}

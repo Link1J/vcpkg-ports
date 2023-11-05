@@ -1,0 +1,41 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 39c8234..71d8909 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -4,16 +4,18 @@ project(wayx-scanner VERSION 1.0 LANGUAGES C CXX)
+ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+ add_compile_options($<$<CXX_COMPILER_ID:Clang>:-fcolor-diagnostics>$<$<CXX_COMPILER_ID:GNU>:-fdiagnostics-color>)
+ 
+-set(CLI11_PRECOMPILED ON CACHE BOOL "")
+-add_subdirectory(externals/ljh EXCLUDE_FROM_ALL)
+-add_subdirectory(externals/range-v3 EXCLUDE_FROM_ALL)
+-add_subdirectory(externals/CLI11 EXCLUDE_FROM_ALL)
++find_package(PkgConfig)
++pkg_check_modules(DBUS REQUIRED IMPORTED_TARGET dbus-1)
++find_package(Threads REQUIRED)
++find_package(ljh)
++find_package(range-v3)
++find_package(CLI11)
+ 
+ if(MSVC)
+     add_compile_options(-D_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING)
+-    add_compile_options(/W3 /utf-8 $<$<NOT:$<CONFIG:DEBUG>>:/WX>)
++    add_compile_options(/W3 /utf-8)
+ else()
+-    add_compile_options(-Wall -pedantic -Wno-switch $<$<COMPILE_LANGUAGE:CXX>:-Wno-changes-meaning> $<$<NOT:$<CONFIG:DEBUG>>:-Werror>)
++    add_compile_options(-Wall -pedantic -Wno-switch $<$<COMPILE_LANGUAGE:CXX>:-Wno-changes-meaning>)
+ 
+     if(FALSE)
+         add_compile_options(-fsanitize=address)
+@@ -58,11 +60,6 @@ if(CMAKE_SOURCE_DIR STREQUAL PROJECT_SOURCE_DIR)
+     install(
+         TARGETS wayx-scanner EXPORT wayx-scanner
+         RUNTIME DESTINATION bin
+-        LIBRARY DESTINATION lib
+-        ARCHIVE DESTINATION lib
+-        RUNTIME DESTINATION bin
+-        PUBLIC_HEADER DESTINATION include
+-        BUNDLE DESTINATION bin
+         COMPONENT runtime
+     )
+     install(
