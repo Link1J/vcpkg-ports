@@ -20,7 +20,7 @@ Contribution are not likely to be accepted. I am using this as a set of vcpkg-po
 
 ## 📝 License
 
-Copyright © 2020 [Jared Irwin](https://github.com/Link1J).
+Copyright © 2020-2023 [Jared Irwin](https://github.com/Link1J).
 
 This project is [CC0-1.0](LICENSE) licensed.
 
