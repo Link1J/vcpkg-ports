@@ -8,6 +8,7 @@ vcpkg_from_github(
 vcpkg_configure_cmake(
 	SOURCE_PATH ${SOURCE_PATH}
 	PREFER_NINJA
+	-Dljh_BUILD_TESTS=OFF
 )
 vcpkg_install_cmake()
 vcpkg_fixup_cmake_targets(CONFIG_PATH lib/cmake/ljh)
