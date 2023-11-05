@@ -1,12 +1,12 @@
 {
-	"default": {
-		"ljh": {
-			"baseline": "2021-12-09",
-			"port-version": 0
-		},
-		"cppwinrt": {
-			"baseline": "2.0.210312.4",
-			"port-version": 0
-		}
-	}
+  "default": {
+    "cppwinrt": {
+      "baseline": "2.0.210312.4",
+      "port-version": 1
+    },
+    "ljh": {
+      "baseline": "2022-11-05",
+      "port-version": 0
+    }
+  }
 }
