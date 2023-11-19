@@ -6,7 +6,7 @@ endif()
 vcpkg_from_git(
 	OUT_SOURCE_PATH SOURCE_PATH
 	URL https://git.link1j.me/link1j/wayx-scanner.git
-	REF 4edb43ca64b13045d88d97528e3d50a4b489895e
+	REF 5d8c92f74e74ccb5988647c6b813435f59b297c4
 	HEAD_REF master
 	PATCHES deps.patch cli11.patch
 )
