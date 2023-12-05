@@ -1,7 +1,7 @@
 {
   "name": "wayx-scanner",
   "version": "0.0.2",
-  "port-version": 5,
+  "port-version": 6,
   "description": "wayx-scanner",
   "homepage": "https://git.link1j.me/link1j/wayx-scanner",
   "dependencies": [
