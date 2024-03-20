@@ -1,6 +1,6 @@
 if(VCPKG_CROSSCOMPILING)
 	# make FATAL_ERROR in CI when issue #16773 fixed
-	message(WARNING "vcpkg-cmake is a host-only port; please mark it as a host port in your dependencies.")
+	message(WARNING "wayx-scanner is a host-only port; please mark it as a host port in your dependencies.")
 endif()
 
 vcpkg_from_git(
@@ -24,3 +24,5 @@ file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug" "${CURRENT_PACKAGES_DIR}/lib
 file(INSTALL ${SOURCE_PATH}/LICENSE.txt DESTINATION ${CURRENT_PACKAGES_DIR}/share/wayx-scanner RENAME copyright)
 
 vcpkg_fixup_pkgconfig()
+
+set(VCPKG_POLICY_EMPTY_INCLUDE_FOLDER enabled)

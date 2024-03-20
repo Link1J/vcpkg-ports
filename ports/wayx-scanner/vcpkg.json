@@ -2,9 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
   "name": "wayx-scanner",
   "version": "0.0.2",
-  "port-version": 10,
+  "port-version": 11,
   "description": "wayx-scanner",
   "homepage": "https://git.link1j.me/link1j/wayx-scanner",
+  "supports": "native",
   "dependencies": [
     "cli11",
     "ljh",
