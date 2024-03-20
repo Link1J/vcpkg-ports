@@ -18,7 +18,7 @@ vcpkg_install_cmake()
 vcpkg_fixup_cmake_targets(CONFIG_PATH lib/cmake/wayx-scanner)
 
 vcpkg_copy_tools(TOOL_NAMES wayx-scanner AUTO_CLEAN)
-
+	
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug" "${CURRENT_PACKAGES_DIR}/lib")
 
 file(INSTALL ${SOURCE_PATH}/LICENSE.txt DESTINATION ${CURRENT_PACKAGES_DIR}/share/wayx-scanner RENAME copyright)
