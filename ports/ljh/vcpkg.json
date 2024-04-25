@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
   "name": "ljh",
-  "version-date": "2024-03-29",
+  "version-date": "2024-04-25",
   "description": "ljh",
   "homepage": "https://github.com/Link1J/ljh"
 }
