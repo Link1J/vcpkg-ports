@@ -22,8 +22,8 @@ index 39c8234..71d8909 100644
 -    add_compile_options(/W3 /utf-8 $<$<NOT:$<CONFIG:DEBUG>>:/WX>)
 +    add_compile_options(/W3 /utf-8)
  else()
--    add_compile_options(-Wall -pedantic -Wno-switch $<$<COMPILE_LANGUAGE:CXX>:-Wno-changes-meaning> $<$<NOT:$<CONFIG:DEBUG>>:-Werror>)
-+    add_compile_options(-Wall -pedantic -Wno-switch $<$<COMPILE_LANGUAGE:CXX>:-Wno-changes-meaning>)
+-    add_compile_options(-Wall -pedantic -Wno-switch $<$<AND:$<COMPILE_LANGUAGE:CXX>,$<CXX_COMPILER_ID:GNU>>:-Wno-changes-meaning> $<$<NOT:$<CONFIG:DEBUG>>:-Werror> $<$<COMPILE_LANGUAGE:CXX>:-ftemplate-backtrace-limit=0>)
++    add_compile_options(-Wall -pedantic -Wno-switch $<$<AND:$<COMPILE_LANGUAGE:CXX>,$<CXX_COMPILER_ID:GNU>>:-Wno-changes-meaning> $<$<COMPILE_LANGUAGE:CXX>:-ftemplate-backtrace-limit=0>)
  
      if(FALSE)
          add_compile_options(-fsanitize=address)
