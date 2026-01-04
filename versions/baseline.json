@@ -5,8 +5,8 @@
       "port-version": 1
     },
     "ljh": {
-      "baseline": "2024-12-29",
-      "port-version": 1
+      "baseline": "2026-01-04",
+      "port-version": 0
     },
     "wayx-scanner": {
       "baseline": "0.0.2",
